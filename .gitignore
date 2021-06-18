@@ -1,0 +1,43 @@
+# CMake build directory
+*build*/
+*.idea
+CMakeLists.txt
+object_pose/models/object_models/*/*.h5
+
+# Backup files.
+*~
+
+# Prerequisites
+*.d
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.dylib
+*.dll
+
+# Fortran module files
+*.mod
+*.smod
+*.workspace
+*.workspace.user
+
+# Compiled Static libraries
+*.lai
+*.la
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+
+
+
