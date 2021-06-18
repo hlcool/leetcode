@@ -14,17 +14,18 @@
 
 using namespace std;
 
-class Solution{
+class Solution
+{
 public:
     //hash表的方法
     vector<int> twoSum_1(vector<int> &nums, int target)
     {
         int length = static_cast<int>(nums.size());
         unordered_map<int, int> hashTable;
-        for(int i=0; i<length; i++)
+        for (int i = 0; i < length; i++)
         {
-            auto it = hashTable.find(target-nums[i]);
-            if(it != hashTable.end())
+            auto it = hashTable.find(target - nums[i]);
+            if (it != hashTable.end())
             {
                 return {it->second, i};
             }
@@ -36,11 +37,11 @@ public:
     //暴力匹配方法
     vector<int> twoSum_2(vector<int> &nums, int target)
     {
-        for(int i=0; i<nums.size(); i++)
+        for (int i = 0; i < nums.size(); i++)
         {
-            for(int j=i+1; j<nums.size(); j++)
+            for (int j = i + 1; j < nums.size(); j++)
             {
-                if(nums[i]+nums[j] == target)
+                if (nums[i] + nums[j] == target)
                 {
                     return {i, j};
                 }
@@ -51,7 +52,7 @@ public:
     }
 };
 
-int main(int argc, char * argv[])
+int main(int argc, char *argv[])
 {
     vector<int> src = {2, 7, 0, 15};
     int target = 17;
@@ -59,7 +60,7 @@ int main(int argc, char * argv[])
     Solution solution;
     vector<int> res = solution.twoSum_2(src, target);
 
-    for(int i=0; i<res.size(); i++)
+    for (int i = 0; i < res.size(); i++)
     {
         cout << res[i] << "  ";
     }
